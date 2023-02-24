@@ -45,7 +45,7 @@ class ProfileController: UIViewController {
             } catch let error {
                 print(error.localizedDescription)
             }
-            guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() else {return}
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNav") 
             self?.present(vc, animated: true)
         }
         let action2 = UIAlertAction(title: "Отмена", style: .cancel)
